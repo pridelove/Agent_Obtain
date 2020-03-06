@@ -22,7 +22,6 @@ def test_ip(proxies):
         "https": f"http://{proxies}",
     }
     try:
-        #可以将
         r = requests.get(Verification_url, proxies=proxies, timeout=4)
         if r.status_code == 200:
             print('%s验证成功' % proxies['https'].split('/')[-1])
